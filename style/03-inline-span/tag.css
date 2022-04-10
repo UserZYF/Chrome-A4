@@ -1,0 +1,77 @@
+/* ------------------------------------------标签 tag--------------------------------------------- */
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty) {
+    color: gray;
+    border: 1px solid var(--b3-border-color1);
+    border-radius: var(--b3-border-radius-half-round);
+    padding-left: 4px;
+    padding-right: 6px;
+    font-size: 80%;
+    position: relative;
+    top: -0.08em;
+    /* margin-left: 2px;
+    margin-right: 2px; */
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="tag"] {
+    border-bottom: none;
+}
+
+/* ————————————————————标签#号———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty)::before {
+    content: "☆ ";
+}
+
+/* todo */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="todo"],
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="Todo"],
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="TODO"] {
+    color: #d83931;
+    background-color: #fbbfbc4d;
+    border-color: #fbbfbc4d;
+    /* width: 3em;
+    text-align: center; */
+}
+
+/* doing */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="Doing"],
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="doing"],
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="DOING"] {
+    color: #245bdb;
+    background-color: #bacefd4d;
+    border-color: #bacefd4d;
+    /* width: 3em;
+    text-align: center; */
+}
+
+/* done */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="Done"],
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="DONE"],
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="done"] {
+    color: #2ea121;
+    background-color: #b7edb14d;
+    border-color: #b7edb14d;
+    /* width: 3em;
+    text-align: center; */
+}
+
+/* 急 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="急"] {
+    color: white;
+    background-color: red;
+    border-color: red;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="急"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="todo"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="Todo"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="TODO"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="doing"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="DOING"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="Doing"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="Done"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="DONE"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="done"]::before {
+    content: "★ ";
+}
+
+/* ------------------------------------------标签 END--------------------------------------------- */

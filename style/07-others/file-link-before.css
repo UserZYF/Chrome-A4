@@ -1,0 +1,129 @@
+/* ————————————————————为常见的文件格式设置图标———————————————————— */
+/* 文件夹 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href^="file://"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href^="file://"]::before,
+.b3-typography a[href^="file://"]::before {
+    content: "文件夹";
+    color: #ffac33;
+    background-color: #fcefce;
+    border-radius: var(--b3-border-radius-noraml);
+    margin-right: 4px;
+    float: left;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 80%;
+    position: relative;
+    top: 0.15em;
+    width: 3em;
+    text-align: center;
+}
+
+/* 压缩包 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".zip"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".zip"]::before,
+.b3-typography a[href ^="assets/"][href $=".zip"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".rar"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".rar"]::before,
+.b3-typography a[href ^="assets/"][href $=".rar"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".7z"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".7z"]::before,
+.b3-typography a[href ^="assets/"][href $=".7z"]::before {
+    content: "压缩包";
+    color: #0078d7;
+    background-color: #ebf6ff;
+    border-radius: var(--b3-border-radius-noraml);
+    margin-right: 4px;
+    float: left;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 80%;
+    position: relative;
+    top: 0.15em;
+    width: 3em;
+    text-align: center;
+}
+
+/* word */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".docx"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".docx"]::before,
+.b3-typography [href ^="assets/"][href $=".docx"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".doc"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".doc"]::before,
+.b3-typography [href ^="assets/"][href $=".doc"]::before {
+    content: "Word";
+    color: #4a8dff;
+    background-color: #e2eaf8;
+    border-radius: var(--b3-border-radius-noraml);
+    margin-right: 4px;
+    float: left;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 80%;
+    position: relative;
+    top: 0.15em;
+    width: 3em;
+    text-align: center;
+}
+
+/* ppt */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".pptx"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".pptx"]::before,
+.b3-typography [href ^="assets/"][href $=".pptx"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".ppt"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".ppt"]::before,
+.b3-typography [href ^="assets/"][href $=".ppt"]::before {
+    content: "PPT";
+    color: #ff7861;
+    background-color: #ffedea;
+    border-radius: var(--b3-border-radius-noraml);
+    margin-right: 4px;
+    float: left;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 80%;
+    position: relative;
+    top: 0.15em;
+    width: 3em;
+    text-align: center;
+}
+
+/* excel */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".xlsx"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".xlsx"]::before,
+.b3-typography [href ^="assets/"][href $=".xlsx"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".xls"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".xls"]::before,
+.b3-typography [href ^="assets/"][href $=".xls"]::before {
+    content: "Excel";
+    color: #00c090;
+    background-color: #ebfffa;
+    border-radius: var(--b3-border-radius-noraml);
+    margin-right: 4px;
+    float: left;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 80%;
+    position: relative;
+    top: 0.15em;
+    width: 3em;
+    text-align: center;
+}
+
+/* pdf */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".pdf"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".pdf"]::before,
+.b3-typography [href ^="assets/"][href $=".pdf"]::before {
+    content: "PDF";
+    color: #ff4867;
+    background-color: #ffeaed;
+    border-radius: var(--b3-border-radius-noraml);
+    margin-right: 4px;
+    float: left;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 80%;
+    position: relative;
+    top: 0.15em;
+    width: 3em;
+    text-align: center;
+}

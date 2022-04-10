@@ -1,0 +1,119 @@
+/* 本主题标签页部分来自于 lisontowind 制作的 Roundark 主题  */
+/* 感谢 notion-theme 主题作者 Rc 和 city-in-dark主题的作者 Weihan-Chen 给予的帮助 */
+
+
+/* --------------------------------------------------标签页 Tab--------------------------------------------- */
+/* 标签页底部背景颜色,标签页数量较少时可以看到，颜色和标签页颜色保持一致 */
+.layout-tab-bar.fn__flex,
+ul.fn__flex.layout-tab-bar {
+    background-color: var(--b3-tab-background);
+}
+
+/* ————————————————————给标签页添加边框（通过设置标签页种字体边框实现的）———————————————————— */
+/* 给标签页种文字添加左侧边框（模仿chrome标签页的步骤） */
+.layout-tab-bar .item:not(.item--focus) .item__text {
+    border-left: 1px solid var(--b3-tab-bar-border-color);
+}
+
+/* 将第一个标签页左侧边框设置为透明（模仿chrome标签页的步骤） */
+.layout-tab-bar .item:not(.item--focus):first-child .item__text {
+    border-left: 1px solid transparent;
+}
+
+/* 给最后一个标签页设置右边框（模仿chrome标签页的步骤） */
+/* 通过设置 after 伪元素实现的 */
+.layout-tab-bar .item:not(.item--focus):last-child .item__text::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    background-color: var(--b3-tab-bar-border-color);
+}
+
+/* 将当前标签页的左侧边框设置为透明（不设置就没有边框宽度，点击会有一点点左右位移） */
+.layout-tab-bar .item--focus .item__text {
+    border-left: 1px solid transparent !important;
+}
+
+/* 将当前标签页的右侧标签页的左边框设置为透明 */
+.layout-tab-bar .item--focus+.item .item__text {
+    border-left: 1px solid transparent !important;
+}
+
+
+/* 标签页相关设置 */
+.layout-tab-bar .item {
+    position: relative;
+    background-color: var(--b3-tab-background);
+    border-top-left-radius: 8px 8px;
+    border-top-right-radius: 8px 8px;
+    /* 因为思源有顶部dock栏，所以加个上边框，标签页才会和上面有间隔 */
+    border-top: 1px solid var(--b3-tab-background);
+    /* 这是决定标签页是否折叠的代码，注释掉则会自动折叠 */
+    flex: none;
+    /* 设置标签页的宽度 */
+    width: 12em;
+}
+
+
+/* 标签页中文字的相关设置 */
+.layout-tab-bar .item .item__text {
+    width: 6em;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: inline;
+}
+
+/* 给标签页前后都添加透明伪元素，目的是为了遮挡当前标签页，以达成chrome标签页的效果 */
+.layout-tab-bar .item:before {
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    /* 将小正方形移到标签页左下角 */
+    left: -10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+}
+
+.layout-tab-bar .item:after {
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    /* 将小正方形移到标签页右下角 */
+    right: -10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    /* 设置级别的，必须保留 */
+    z-index: 1;
+}
+
+
+/* 设置当前标签页样式 */
+.layout-tab-bar .item--focus {
+    background: var(--b3-tab-focus-background);
+    box-shadow: none !important;
+    border-top: 1px solid var(--b3-tab-background);
+}
+
+/* 如果当前标签页在最左侧，则取消左上角的圆角；如果在右侧，则不用做相关设置 */
+.layout-tab-bar .item--focus:first-child {
+    border-top-left-radius: 0px !important;
+}
+
+/* 通过设置当前标签页的渐变，给当前标签页的左下角和右下角都增加一个图形，以达到chrome标签页效果 */
+.layout-tab-bar .item--focus::after {
+    background: radial-gradient(circle at 100% 0, transparent 10px, var(--b3-tab-focus-background) 11px);
+}
+
+.layout-tab-bar .item--focus::before {
+    background: radial-gradient(circle at 0 0, transparent 10px, var(--b3-tab-focus-background) 11px);
+}
+
+/* --------------------------------------------------标签页 END--------------------------------------------- */

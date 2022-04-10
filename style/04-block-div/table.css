@@ -1,0 +1,68 @@
+/* -------------------------------表格start------------------------------------- */
+/* 表格100%宽度 */
+.protyle-wysiwyg table,
+.b3-typography table {
+    display: table;
+    width: 100%;
+    font-size: 95%;
+}
+
+.b3-typography table tr,
+.protyle-wysiwyg table tr {
+    background-color: transparent;
+}
+
+/* 设置表头区域顶部边框，使表格更明显 */
+.protyle-wysiwyg table thead,
+.b3-typography table thead {
+    background-color: transparent !important;
+    /* border-top: 3px solid var(--b3-table-border-black-color) !important; */
+    /* border-bottom: 0.1em solid var(--b3-table-border-black-color) !important; */
+}
+
+/*设置表格表头样式，颜色，背景，加粗，居中对齐*/
+table th {
+    font-weight: bold;
+    text-align: center;
+    /* color: var(--b3-theme-primary); */
+    background-color: transparent !important;
+    border-top: 0.15em solid var(--b3-table-border-black-color) !important;
+    border-bottom: 0.1em solid var(--b3-table-border-black-color) !important;
+}
+
+/* 设置表格内部边框 */
+th, td {
+    min-width: 1em;
+    border-left: transparent !important;
+    border-right: 0.05em solid var(--b3-table-border-color) !important;
+    border-top-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-collapse: collapse;
+    color: inherit;
+}
+
+table th:last-child,
+table tr td:last-child {
+    border-right-color: transparent !important;
+}
+
+/* 表格奇偶行不同颜色 */
+tbody tr:nth-child(2n) {
+    background-color: transparent !important;
+}
+
+tbody tr:nth-child(2n + 1) {
+    background-color: transparent !important;
+}
+
+tbody tr:last-child {
+    border-bottom: 0.15em solid var(--b3-table-border-black-color);
+}
+
+/* 设置表格行悬浮高亮 */
+/* table tr:hover {
+    background: var(--b3-theme-hover2) !important;
+    color: var(--b3-theme-primary) !important;
+} */
+
+/* -------------------------------表格end------------------------------------- */
