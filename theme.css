@@ -95,6 +95,8 @@
 /* ————————————————————引入自定义设置———————————————————— */
 /* 搜索界面左右排版 */
 @import url("style/CtrlP.css");
+/* 引入列表转思维导图的代码，来自roy和萌新 */
+@import url("style/markmap.css");
 /* 引入大家的自定义配置，放到widgets文件夹下，名称为custom.css */
 @import url(/widgets/custom.css);
 

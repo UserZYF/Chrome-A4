@@ -12,5 +12,10 @@
     background-color: var(--b3-theme-background);
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
     min-height: 29.7cm;
+    /* text-align: justify; */
+}
+
+/* 段落内容两端对齐 */
+.p {
     text-align: justify;
 }

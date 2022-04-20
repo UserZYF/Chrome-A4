@@ -57,48 +57,56 @@ strong[style="background-color: var(--b3-font-background1);"]::after {
     content: "¹";
     color: var(--b3-font-color1);
     font-weight: 400;
+    opacity: 0.4;
 }
 
 strong[style="background-color: var(--b3-font-background2);"]::after {
     content: "²";
     color: var(--b3-font-color2);
     font-weight: 400;
+    opacity: 0.4;
 }
 
 strong[style="background-color: var(--b3-font-background3);"]::after {
     content: "³";
     color: var(--b3-font-color3);
     font-weight: 400;
+    opacity: 0.4;
 }
 
 strong[style="background-color: var(--b3-font-background4);"]::after {
     content: "⁴";
     color: var(--b3-font-color4);
     font-weight: 400;
+    opacity: 0.4;
 }
 
 strong[style="background-color: var(--b3-font-background5);"]::after {
     content: "⁵";
     color: var(--b3-font-color5);
     font-weight: 400;
+    opacity: 0.4;
 }
 
 strong[style="background-color: var(--b3-font-background6);"]::after {
     content: "⁶";
     color: var(--b3-font-color6);
     font-weight: 400;
+    opacity: 0.4;
 }
 
 strong[style="background-color: var(--b3-font-background7);"]::after {
     content: "⁷";
     color: var(--b3-font-color7);
     font-weight: 400;
+    opacity: 0.4;
 }
 
 strong[style="background-color: var(--b3-font-background8);"]::after {
     content: "⁸";
     color: var(--b3-font-color8);
     font-weight: 400;
+    opacity: 0.4;
 }
 
 /* 设置第13个背景色为挖空效果 */

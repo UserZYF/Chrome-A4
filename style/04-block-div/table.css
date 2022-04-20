@@ -5,6 +5,8 @@
     display: table;
     width: 100%;
     font-size: 95%;
+    /* text-align: center; */
+    /* margin: 0 auto; */
 }
 
 .b3-typography table tr,
@@ -35,10 +37,15 @@ th, td {
     min-width: 1em;
     border-left: transparent !important;
     border-right: 0.05em solid var(--b3-table-border-color) !important;
-    border-top-color: transparent !important;
-    border-bottom-color: transparent !important;
+    border-bottom: 0.05em solid var(--b3-table-border-color) !important;
+    /* border-top-color: transparent !important; */
+    /* border-bottom-color: transparent !important; */
     border-collapse: collapse;
     color: inherit;
+}
+
+table tr td {
+    border-bottom: 0.08em solid var(--b3-table-border-color) !important;
 }
 
 table th:last-child,
@@ -58,6 +65,8 @@ tbody tr:nth-child(2n + 1) {
 tbody tr:last-child {
     border-bottom: 0.15em solid var(--b3-table-border-black-color);
 }
+
+
 
 /* 设置表格行悬浮高亮 */
 /* table tr:hover {

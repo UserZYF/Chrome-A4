@@ -35,3 +35,9 @@ textarea.b3-text-field.fn__flex-1 {
     border: 1px solid transparent;
     resize: none;
 }
+
+
+/* 设置有背景颜色的块为圆角 */
+div[style*="background-color:"] {
+    border-radius: 2px !important;
+}
