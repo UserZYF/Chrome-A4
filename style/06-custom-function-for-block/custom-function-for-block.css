@@ -308,11 +308,13 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
     margin: 0;
 }
 
+.protyle-wysiwyg [custom-f="bg"] .li .list .li .list .li,
 .protyle-wysiwyg [custom-f="bg"] .li .list .li {
     outline: none !important;
     border-top: 0.05em solid #888;
 }
 
+.protyle-wysiwyg [custom-f="bg"] .li .list .li .list .li:first-of-type,
 .protyle-wysiwyg [custom-f="bg"] .li .list .li:first-of-type {
     border-top: none !important;
 }
