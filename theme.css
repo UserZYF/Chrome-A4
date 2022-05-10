@@ -8,7 +8,8 @@
 @import url("style/07-others/begin-setting.css");
 /* 引入空行提示 */
 @import url("style/07-others/empty-letter.css");
-
+/* 设置打印样式 */
+@import url("style/07-others/print.css");
 
 /* ————————————————————界面修改———————————————————— */
 /* 修改上左右dock栏样式 */
@@ -87,7 +88,7 @@
 /* 增加文档的自定义属性 */
 @import url("style/05-custom-function-for-file/custom-function-for-file.css");
 /* 增加块的自定义属性 */
-/* @import url("style/06-custom-function-for-block/custom-function-for-block.css"); */
+@import url("style/06-custom-function-for-block/custom-function-for-block.css");
 /* 对PPT，word等文件格式前面加上标识 */
 @import url("style/07-others/file-link-before.css");
 
@@ -97,70 +98,6 @@
 @import url("style/CtrlP.css");
 /* 引入列表转思维导图的代码，来自roy */
 @import url("style/markmap.css");
-/* 引入大家的自定义配置，放到widgets文件夹下，名称为custom.css */
-@import url(/widgets/custom.css);
-
+/* 引入自定义配置 */
+@import url("custom.css");
 /* ----------------------------------------------------引入结束---------------------------------------------------------- */
-
-/* -----------------------------------------------列表转化为表格------------------------------------------- */
-/* 自定义属性，列表转化为表格 */
-.list[data-node-id][data-type="NodeList"][custom-f="bg"] {
-    padding: 4px;
-    font-size: 95%;
-    overflow-x: auto;
-    /* width: 100%; */
-    /* display: flex; */
-}
-
-/* 对所有子列表项设置格式*/
-
-.protyle-wysiwyg [custom-f="bg"] .li {
-    display: flex;
-    outline: 0.05em solid #888;
-}
-
-.protyle-wysiwyg [custom-f="bg"] .li .list {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    outline: 0.05em solid #888;
-}
-
-.protyle-wysiwyg [custom-f="bg"] [data-node-id].li>[data-node-id] {
-    margin-left: 0 !important;
-}
-
-/* 对符号后文字设置格式 */
-.protyle-wysiwyg [custom-f="bg"] .p {
-    text-align: left;
-    align-items: center;
-    display: flex;
-    min-width: 110px;
-    /* width: fit-content !important; */
-    margin: 0;
-}
-
-
-.protyle-wysiwyg [custom-f="bg"] .li>.list>.li {
-    outline: none !important;
-    border-top: 0.05em solid #888;
-}
-
-
-.protyle-wysiwyg [custom-f="bg"] .li>.list>.li:first-of-type {
-    border-top: none !important;
-}
-
-/* 去除小竖线 */
-.list[data-node-id][data-type="NodeList"][custom-f="bg"] .li>:before {
-    display: none;
-}
-
-/* 取消显示前面符号 */
-.list[data-node-id][data-type="NodeList"][custom-f="bg"] .protyle-action {
-    display: none;
-}
-
-/* 自定义属性，列表转化为表格 END */
-
-/* ---------------------------------------------------------列表转化为表格 END-------------------------------------------------- */

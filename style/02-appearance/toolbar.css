@@ -1,6 +1,6 @@
 /* --------------------------------------------------鼠标选中文本后弹出的工具栏样式------------------------------------- */
 .protyle-toolbar {
-    background-color: var(--b3-theme-background2);
+    background-color: white;
     box-shadow: rgb(0 0 0 / 20%) 0px 4px 20px 0px;
     border-radius: var(--b3-border-radius-noraml);
 }

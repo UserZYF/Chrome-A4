@@ -40,7 +40,7 @@ function SubMenu(selectid,selecttype,className = 'b3-menu__submenu') {
   if(selecttype=="NodeList"){
     node.appendChild(GraphView(selectid))
     node.appendChild(TableView(selectid))
-	node.appendChild(kanbanView(selectid))
+	// node.appendChild(kanbanView(selectid))
     node.appendChild(DefaultView(selectid))
   }
   if(selecttype=="NodeTable"){
@@ -74,17 +74,17 @@ function TableView(selectid){
   button.onclick=ViewMonitor
   return button
 }
-function kanbanView(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","f")
-  button.setAttribute("custom-attr-value","kb")
+// function kanbanView(selectid){
+//   let button = document.createElement("button")
+//   button.className="b3-menu__item"
+//   button.setAttribute("data-node-id",selectid)
+//   button.setAttribute("custom-attr-name","f")
+//   button.setAttribute("custom-attr-value","kb")
 
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconMenu"></use></svg><span class="b3-menu__label">转换为看板</span>`
-  button.onclick=ViewMonitor
-  return button
-}
+//   button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconMenu"></use></svg><span class="b3-menu__label">转换为看板</span>`
+//   button.onclick=ViewMonitor
+//   return button
+// }
 function DefaultView(selectid){
   let button = document.createElement("button")
   button.className="b3-menu__item"

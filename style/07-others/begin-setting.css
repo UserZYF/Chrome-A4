@@ -41,3 +41,15 @@ textarea.b3-text-field.fn__flex-1 {
 div[style*="background-color:"] {
     border-radius: 2px !important;
 }
+
+
+/* 段落内容两端对齐 */
+/* 由于图片属于span行内元素，给段落设置缩进会导致图片也缩进 */
+/* .protyle-wysiwyg>.p {
+    text-indent: 2em;
+} */
+
+/* 去掉弹窗中项目的上下滚动条，修复bug */
+.b3-dialog__content .fn__flex-1 {
+    overflow: hidden;
+}

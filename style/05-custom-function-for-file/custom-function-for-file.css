@@ -57,18 +57,7 @@
     background-color: #f1ede1 !important;
 }
 
-/* 导出的字体格式 */
-.protyle-wysiwyg[custom-f~=daochu],
-.b3-typography[custom-f~=daochu] {
-    font-family: "Times New Roman", "宋体";
-}
 
-.protyle-wysiwyg[custom-f~=daochu] div[data-type="NodeHeading"],
-.b3-typography[custom-f~=daochu] div[data-type="NodeHeading"],
-[custom-f~=daochu] table thead {
-    font-family: "Times New Roman", "黑体";
-    font-weight: bold;
-}
 
 
 /* 禁止编辑 */
@@ -82,7 +71,40 @@
 
 /* 编辑区域100%宽度 */
 .protyle-wysiwyg[custom-f~=full] {
-    width: 100%;
+    width: calc(100% - 4cm) !important;
 }
+
+/* 设置横版A4纸宽度 */
+.protyle-wysiwyg[custom-f~=heng] {
+    width: 29.7cm;
+    min-height: 21cm;
+}
+
+
+/* 导出的字体格式 */
+.protyle-wysiwyg[custom-f~=print],
+.protyle-wysiwyg[custom-f~=daochu] {
+    font-family: "Times New Roman", "宋体";
+}
+
+.protyle-wysiwyg[custom-f~=daochu] div[data-type="NodeHeading"],
+.b3-typography[custom-f~=daochu] div[data-type="NodeHeading"],
+.protyle-wysiwyg[custom-f~=print] div[data-type="NodeHeading"],
+.b3-typography[custom-f~=print] div[data-type="NodeHeading"],
+[custom-f~=daochu] table thead {
+    font-family: "Times New Roman", "黑体" !important;
+    font-weight: normal;
+}
+
+.protyle-wysiwyg[custom-f~=daochu] div[data-type="NodeHeading"]::before,
+.b3-typography[custom-f~=daochu] div[data-type="NodeHeading"]::before,
+.protyle-wysiwyg[custom-f~=print] div[data-type="NodeHeading"]::before,
+.b3-typography[custom-f~=print] div[data-type="NodeHeading"]::before {
+    display: none !important;
+}
+
+
+
+
 
 /* -------------------------------------------------对整个文档实行自定义属性 END--------------------------------------------- */
