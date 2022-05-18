@@ -139,15 +139,17 @@ ul.fn__flex.layout-tab-bar {
     display: none;
 }
 
-li.item.item--pin::after {
+/* 为钉住的标签页右上角增加红色圆形 */
+li.item.item--pin:not(.item--focus):hover .item__text::after,
+li.item.item--pin:not(.item--focus) .item__text::after {
     content: "";
     position: absolute;
-    width: 6px;
-    height: 6px;
+    width: 0.4em;
+    height: 0.4em;
     background-color: var(--b3-theme-error);
-    top: 4px;
-    right: 4px;
-    border-radius: 50px;
+    top: 0.4em;
+    right: 0.7em;
+    border-radius: 50%;
 }
 
 /* --------------------------------------------------标签页 END--------------------------------------------- */

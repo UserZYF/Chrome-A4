@@ -86,6 +86,11 @@
     margin-top: 6px;
 }
 
+.protyle-wysiwyg [data-node-id][data-type="NodeHeading"]:first-child,
+.b3-typography [data-type="NodeHeading"]:first-child {
+    margin-top: 0px !important;
+}
+
 /* 设置6级标题高度 */
 .protyle-wysiwyg [data-node-id].h5 {
     line-height: 28px;
@@ -117,8 +122,6 @@
 }
 
 .protyle-wysiwyg [data-node-id].h3::before {
-    display: block !important;
-    float: left;
     content: "H₃";
     color: var(--b3-font-color3);
 }

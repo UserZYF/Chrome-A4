@@ -6,7 +6,8 @@
     display: inline-block;
     color: var(--b3-theme-on-surface);
     padding: 4px;
-    border: 1px solid var(--b3-border-color1);
+    /* border: 1px solid var(--b3-border-color1); */
+    text-decoration: 0.05em solid var(--b3-border-color1) underline;
     border-radius: var(--b3-border-radius-noraml);
     margin: 0px;
 }

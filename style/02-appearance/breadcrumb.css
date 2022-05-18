@@ -29,4 +29,9 @@
     box-shadow: var(--b3-protyle-content-shadow);
 }
 
+.protyle-breadcrumb button.b3-tooltips.b3-tooltips__w.block__icon {
+    position: relative;
+    top: 2px;
+}
+
 /* -------------------------------------------------面包屑导航样式 END-------------------------------------------- */
