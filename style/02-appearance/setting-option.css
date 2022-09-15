@@ -6,9 +6,9 @@
 }
 
 /* 设置界面右栏 */
-.b3-dialog--open .b3-dialog__container .b3-tab-container {
+/* .b3-dialog--open .b3-dialog__container .b3-tab-container {
     background-color: #f3f5f7 !important;
-}
+} */
 
 /* 搜索界面标签页中文字居中 */
 .b3-dialog--open .b3-dialog__container span.item__text {
@@ -37,7 +37,8 @@
 /* 为“打开主题文件夹”的按钮设置下划线 */
 a#appearanceOpenTheme,
 a#appearanceOpenIcon {
-    border-bottom: 2px solid gray;
+    /* border-bottom: 2px solid gray; */
+    color: var(--b3-theme-color);
 }
 
 a#appearanceOpenTheme:hover,

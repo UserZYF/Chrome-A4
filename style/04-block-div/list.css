@@ -2,7 +2,7 @@
 /* -------------------------列表悬浮------------------------ */
 /* 大圆背景 */
 .protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
-    background-color: var(--b3-theme-hover2) !important;
+    background-color: #dee1e6 !important;
     border-radius: var(--b3-border-radius-half-round);
 }
 
@@ -15,8 +15,12 @@
 /* -------------------------列表折叠------------------------ */
 /* 大圆背景 */
 .protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:after {
-    /* background-color: var(--b3-theme-hover) !important; */
     border-radius: var(--b3-border-radius-half-round);
+    background-color: #dee1e6 !important;
+}
+
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action--task::after {
+    border-radius: 0px;
 }
 
 /* 小圆点颜色 */
@@ -24,15 +28,12 @@
     color: var(--b3-theme-primary) !important;
 }
 
-/* ——————————————————————去除无序列表底部外边距———————————————————— */
-.protyle-wysiwyg [data-node-id].li>[data-node-id] {
-    margin-bottom: 0px;
-}
+
 
 /* ————————————————————减小前面符号·的大小———————————————————— */
-.list[data-node-id][data-type="NodeList"] .protyle-action>svg {
+/* .list[data-node-id][data-type="NodeList"] .protyle-action>svg {
     width: 11px;
-}
+} */
 
 /* 修改集市里边无序列表前小圆点颜色 */
 ::marker {
@@ -60,58 +61,22 @@
 }
 
 
-/* ---------------------—---------------------复选框（待办事项）------------------------------------------------ */
-/* ————————————————————————————给默认的待办事项前的图标和悬浮背景颜色设置为无—————————————————————————————— */
-.protyle-wysiwyg [data-node-id].li>.protyle-action--task svg {
-    opacity: 0;
-}
 
-.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after {
-    background-color: transparent !important;
-    opacity: 0 !important;
-}
-
-/* ————————————————————————————未完成事项的背景颜色———————————————————————————————————————— */
-.protyle-wysiwyg .protyle-action--task,
-.b3-typography .protyle-task {
-    content: url(../../src/dui.svg);
-    width: 1.2em;
-    height: 1.2em;
-    top: 0.4em !important;
-}
-
-/* 折叠待办事项前面的图标 */
-div[fold="1"] .protyle-action.protyle-action--task {
-    content: url(../../src/dui-flod.svg);
-    width: 1.2em;
-    height: 1.2em;
-    top: 0.4em !important;
-}
-
-/* ————————————————————————————————————————复选框选中———————————————————————————————— */
-.protyle-task--done>.protyle-action--task,
-.b3-typography .protyle-task--done {
-    content: url(../../src/dui-c.svg);
-}
-
-/* 折叠待办事项完成时的图标 */
-.protyle-task--done[fold="1"]>.protyle-action--task,
-.b3-typography[fold="1"] .protyle-task--done {
-    content: url(../../src/dui-2.svg) !important;
-    /* width: 1.2em;
-    height: 1.2em;
-    top: 0.4em !important; */
-}
 
 /* —————————————————————完成的待办事项删除线样式和颜色（包括字体样式）——————————————————————— */
 .li.protyle-task--done .p {
     text-decoration: line-through;
-    color: var(--b3-theme-primary);
+    color: #55555a3f;
 }
+
+.li.protyle-task--done .protyle-action.protyle-action--task svg {
+    color: #55555a3f;
+}
+
 
 /* 设置待办事项中的更多样式 */
 .li.protyle-task--done .p strong {
-    color: var(--b3-theme-primary) !important;
+    color: #55555a3f !important;
     background-color: transparent !important;
 }
 

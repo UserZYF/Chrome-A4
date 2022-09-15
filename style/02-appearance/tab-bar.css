@@ -1,3 +1,4 @@
+/* ————————————————————————————————————————————————————————标签页相关设置—————————————————————————————————————————————————————— */
 /* 本主题标签页部分来自于 lisontowind 制作的 Roundark 主题  */
 /* 感谢 notion-theme 主题作者 Rc 和 city-in-dark主题的作者 Weihan-Chen 给予的帮助 */
 
@@ -6,7 +7,6 @@
 /* 标签页底部背景颜色,标签页数量较少时可以看到，颜色和标签页颜色保持一致 */
 .layout-tab-bar.fn__flex,
 ul.fn__flex.layout-tab-bar {
-    /* background-color: var(--b3-tab-background); */
     background-color: #dee1e6;
 }
 
@@ -47,7 +47,6 @@ ul.fn__flex.layout-tab-bar {
 /* 标签页相关设置 */
 .layout-tab-bar .item {
     position: relative;
-    /* background-color: var(--b3-tab-background); */
     background-color: #dee1e6;
     border-top-left-radius: 8px 8px;
     border-top-right-radius: 8px 8px;
@@ -57,6 +56,7 @@ ul.fn__flex.layout-tab-bar {
     flex: none;
     /* 设置标签页的宽度 */
     width: 12em;
+    min-height: 35px;
 }
 
 
@@ -99,7 +99,7 @@ ul.fn__flex.layout-tab-bar {
 
 /* 设置当前标签页样式 */
 .layout-tab-bar .item--focus {
-    background: var(--b3-tab-focus-background);
+    background: white;
     box-shadow: none !important;
     border-top: 1px solid var(--b3-tab-background);
 }
@@ -111,45 +111,67 @@ ul.fn__flex.layout-tab-bar {
 
 /* 通过设置当前标签页的渐变，给当前标签页的左下角和右下角都增加一个图形，以达到chrome标签页效果 */
 .layout-tab-bar .item--focus::after {
-    background: radial-gradient(circle at 100% 0, transparent 10px, var(--b3-tab-focus-background) 11px);
+    background: radial-gradient(circle at 100% 0, transparent 10px, white 11px);
 }
 
 .layout-tab-bar .item--focus::before {
-    background: radial-gradient(circle at 0 0, transparent 10px, var(--b3-tab-focus-background) 11px);
+    background: radial-gradient(circle at 0 0, transparent 10px, white 11px);
 }
+
+/* --------------------------------------------------标签页 END--------------------------------------------- */
 
 .layout-tab-bar .item:not(:last-child) {
     box-shadow: none;
 }
 
 .layout__wnd--active .layout-tab-bar .item--focus {
-    box-shadow: inset 0 2px 0 0 transparent,
-        0px 0px 0.5px rgba(0, 0, 0, 0.055),
-        0px 0px 4px rgba(0, 0, 0, 0.11) !important;
+    box-shadow: inset 0 2px 0 0 transparent !important;
 }
 
-/* 显示钉住的标签页中的文字 */
-.layout-tab-bar .item--pin .item__text {
-    display: block !important;
+/* v2.1.14引入 */
+.layout-tab-bar .item:not(:last-child), .layout-tab-bar .item:last-child:not(.item--focus):not(.item--readonly) {
+    box-shadow: none;
 }
 
+/* 设置新建按钮宽度和圆角 */
+.item--readonly {
+    width: 64px !important;
+    border-radius: 0px !important;
+}
 
-/* 去掉标签页上面的emoji */
+/* -----------------------------设置新建标签页位置跟随最后一个标签页-------------------------------- */
+/* v2.1.14 代码来自于九炎，问题来自于赐我一胖 */
+
+ul.fn__flex.layout-tab-bar.fn__flex-1 {
+    flex: none;
+    max-width: calc(100% - 64px);
+}
+
+ul.layout-tab-bar {
+    flex: 1;
+    background-color: #dee1e6;
+}
+
+/* -----------------------------设置新建标签页位置跟随最后一个标签页 END-------------------------------- */
+
+/* Chrome-A4主题专属代码，防止最后一个标签页被遮挡 */
+.layout-tab-bar .item:last-child:not(.item--readonly) {
+    margin-right: 8px;
+}
+
+/* ------------------------------去掉标签页上面的emoji------------------------------------- */
 .layout-tab-bar .item__icon {
     display: none;
 }
 
-/* 为钉住的标签页右上角增加红色圆形 */
-li.item.item--pin:not(.item--focus):hover .item__text::after,
-li.item.item--pin:not(.item--focus) .item__text::after {
-    content: "";
-    position: absolute;
-    width: 0.4em;
-    height: 0.4em;
-    background-color: var(--b3-theme-error);
-    top: 0.4em;
-    right: 0.7em;
-    border-radius: 50%;
-}
 
-/* --------------------------------------------------标签页 END--------------------------------------------- */
+/* 设置钉住的标签页的样式 */
+li.item.item--pin::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #6d7ec8;
+    top: 10px;
+    right: 10px;
+    border-radius: 50px;
+}

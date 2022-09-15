@@ -1,23 +1,17 @@
 /* -------------------------------------------------面包屑导航样式-------------------------------------------- */
 .protyle-breadcrumb {
-    color: gray;
-    background-color: white;
-    font-size: 14px !important;
-    height: 26px;
+    color: #202124;
+    background-color: #f1f3f4;
+    font-size: 0.8em !important;
+    height: 20px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    margin: 6px;
+    margin: 4px;
     margin-left: 16px;
     margin-right: 16px;
-    border: 1px solid var(--b3-border-color);
+    /* border: 1px solid var(--b3-border-color); */
     border-radius: var(--b3-border-radius-half-round);
-    padding-top: 0px;
-}
-
-.protyle-breadcrumb__bar {
-    overflow: hidden;
-    margin-top: -3px;
 }
 
 .protyle-breadcrumb__item svg {
@@ -26,35 +20,17 @@
 }
 
 .fn__flex-1.protyle {
-    background-color: var(--b3-theme-background2);
+    background-color: white;
 }
 
 .protyle-content {
-    border-top: var(--b3-border-normal);
+    /* border-top: var(--b3-border-normal); */
     box-shadow: var(--b3-protyle-content-shadow);
 }
 
+.protyle-breadcrumb__item:hover,
+.protyle-breadcrumb__item--active {
+    background-color: var(--b3-theme-tm2) !important;
+}
 
 /* -------------------------------------------------面包屑导航样式 END-------------------------------------------- */
-
-/* 调整面包屑条目颜色（依次为符号icon，小三角标志，文字颜色） */
-svg.popover__block,
-.protyle-breadcrumb__arrow,
-.protyle-breadcrumb__item {
-    color: #55555a4d;
-}
-
-/* 设置聚焦的块前面的符号颜色为深色 */
-span.protyle-breadcrumb__item.protyle-breadcrumb__item--active svg.popover__block {
-    color: var(--b3-theme-on-background);
-}
-
-/* 鼠标在面包屑上悬浮时更改文字和文字前面icon的颜色 */
-.protyle-breadcrumb__item:hover {
-    color: var(--b3-theme-on-background) !important;
-    background-color: rgba(154, 153, 155, .08) !important;
-}
-
-.protyle-breadcrumb__item:hover svg.popover__block {
-    color: var(--b3-theme-on-background) !important;
-}

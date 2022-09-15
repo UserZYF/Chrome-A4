@@ -1,20 +1,58 @@
 /* 隐藏左上角设置按钮，鼠标悬浮时显示 */
-#toolbar .toolbar__item svg {
+/* #toolbar .toolbar__item svg {
     opacity: 0;
-    /* background-color: red; */
 }
 
 #toolbar:hover svg {
     opacity: 1;
 }
 
+*/
 
 /* 给左侧dock栏设置右边框 */
 div#dockLeft {
-    border-right: 1px solid var(--b3-border-color);
+    background-color: white;
+    border-top: 8px solid #dee1e6;
 }
 
 /* 给右侧dock栏设置左边框 */
 div#dockRight {
-    border-left: 1px solid var(--b3-border-color);
+    background-color: white;
+    border-top: 8px solid #dee1e6;
+}
+
+
+/* -----------------------------------------------顶栏----------------------------------------------------- */
+.toolbar {
+    background-color: #f3f5f7;
+    margin-bottom: -22px;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 300ms;
+    transition-delay: 500ms;
+}
+
+.toolbar:hover {
+    opacity: 1;
+    transition: all 300ms;
+}
+
+ul.layout-tab-bar,
+ul.fn__flex.layout-tab-bar.fn__flex-1 {
+    margin-top: 7px;
+    background-color: #dee1e6;
+}
+
+body.body--win32 {
+    background-color: #dee1e6;
+}
+
+/* 消除bug，否有软件右侧会出现东西 */
+.fn__flex-1.fn__flex {
+    overflow: hidden;
+}
+
+/* 设置底部状态栏颜色为白色 */
+.status {
+    background-color: white;
 }

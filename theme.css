@@ -27,13 +27,11 @@
 /* 修改选中文字后弹出的悬浮工具栏的样式 */
 @import url("style/02-appearance/toolbar.css");
 /* 修改弹出菜单的样式 */
-@import url("style/02-appearance/meun.css");
+@import url("style/02-appearance/menu.css");
 /* 修改按钮样式 */
 @import url("style/02-appearance/button.css");
 /* 修改设置界面样式 */
 @import url("style/02-appearance/setting-option.css");
-/* 修改警告界面样式 */
-@import url("style/02-appearance/warning-color.css");
 
 
 /* ————————————————————行内元素———————————————————— */
@@ -90,7 +88,7 @@
 /* 增加块的自定义属性 */
 @import url("style/06-custom-function-for-block/custom-function-for-block.css");
 /* 对PPT，word等文件格式前面加上标识 */
-@import url("style/07-others/file-link-before.css");
+/* @import url("style/07-others/file-link-before.css"); */
 
 
 /* ————————————————————引入自定义设置———————————————————— */
@@ -101,3 +99,9 @@
 /* 引入自定义配置 */
 @import url("custom.css");
 /* ----------------------------------------------------引入结束---------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    src: url('fonts/Inter-Regular.woff2');
+}

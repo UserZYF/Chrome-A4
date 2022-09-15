@@ -27,7 +27,7 @@
 
 /* ————————————————————去掉软件的边框线———————————————————— */
 body.body--win32 {
-    border: none !important;
+    border-width: 0px !important;
 }
 
 /* ————————————————————表单设置不能拖拽缩放———————————————————— */
@@ -52,4 +52,14 @@ div[style*="background-color:"] {
 /* 去掉弹窗中项目的上下滚动条，修复bug */
 .b3-dialog__content .fn__flex-1 {
     overflow: hidden;
+}
+
+/* 文档树滚动条，鼠标悬浮时才显示 */
+.fn__flex-1::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.fn__flex-1:hover::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color);
 }

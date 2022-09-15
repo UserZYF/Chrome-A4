@@ -1,7 +1,14 @@
 /* -----------------------------------------超链接 a----------------------------------- */
 
 .protyle-wysiwyg [data-node-id] span[data-type="a"]:not(:empty) {
-    border-bottom: 0.1em solid var(--b3-link-underline-color);
+    border-bottom: 0.05em solid var(--b3-link-underline-color);
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="a"]::before {
+    content: "↗";
+    font-family: var(--b3-font-family-code);
+    color: var(--b3-link-underline-color);
+    margin-right: 4px;
 }
 
 /* 集市中说明文档链接样式 */

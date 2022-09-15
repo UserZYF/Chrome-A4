@@ -1,8 +1,10 @@
 /* ------------------------------------------------块引用/引用块------------------------------------------------- */
 /* 设置引用块格式 */
 .protyle-wysiwyg [data-node-id] span[data-type='block-ref'] {
-    color: #d71a1b !important;
-    border-bottom: 0.1em solid gray;
+    /* color: var(--b3-theme-color) !important;
+    border-bottom: 0.1em solid gray; */
+    color: var(--b3-theme-color) !important;
+    /* border-bottom: 0.1em solid var(--b3-theme-color); */
     margin-left: 2px;
     margin-right: 2px;
     padding-left: 2px;
@@ -10,20 +12,23 @@
 }
 
 /* 为引用块后面增加引用图标 */
-.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]::before {
+/* .protyle-wysiwyg [data-node-id] span[data-type="block-ref"]::before {
     content: "📑";
     position: relative;
     font-size: 80%;
     top: -0.05em;
     margin-right: 2px;
-}
-
-/* .protyle-wysiwyg [data-node-id] span[data-type="block-ref"]:hover {
-    color: var(--b3-theme-primary);
-    background-color: var(--b3-theme-hover);
-    border-radius: 3px 3px 0 0;
 } */
 
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]::before {
+    content: "[[";
+    color: #80808080;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]::after {
+    content: "]]";
+    color: #80808080;
+}
 
 
 /* 去掉h1-h6标题上块引用的下划线，感谢二群群友123的建议 */
