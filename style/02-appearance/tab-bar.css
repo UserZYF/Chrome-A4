@@ -115,7 +115,7 @@ ul.fn__flex.layout-tab-bar {
 }
 
 .layout-tab-bar .item--focus::before {
-    background: radial-gradient(circle at 0 0, transparent 10px, white 11px);
+    background: radial-gradient(circle at 0 0, transparent 10px, white 11px) !important;
 }
 
 /* --------------------------------------------------标签页 END--------------------------------------------- */
@@ -165,8 +165,8 @@ ul.layout-tab-bar {
 }
 
 
-/* 设置钉住的标签页的样式 */
-li.item.item--pin::after {
+/* 设置钉住的标签页的样式，会和focus时after状态冲突，不要通过伪元素，要通过背景图片设置 */
+/* li.item.item--pin::after {
     content: "";
     width: 5px;
     height: 5px;
@@ -174,4 +174,11 @@ li.item.item--pin::after {
     top: 10px;
     right: 10px;
     border-radius: 50px;
+} */
+
+li.item.item--pin {
+    background-image: url(../../src/pin.svg);
+    background-size: 0.8em 0.8em;
+    background-repeat: no-repeat;
+    background-position: 10em 0.4em;
 }

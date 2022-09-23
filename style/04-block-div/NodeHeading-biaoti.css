@@ -4,7 +4,7 @@
 .b3-typography h1 {
     text-align: left;
     font-size: 1.6em !important;
-    font-weight: 550;
+    /* font-weight: 550; */
     position: relative;
     z-index: 0;
     vertical-align: middle;
@@ -14,7 +14,7 @@
 .protyle-wysiwyg [data-node-id].h2,
 .b3-typography h2 {
     font-size: 1.5em !important;
-    font-weight: 550;
+    /* font-weight: 550; */
     position: relative;
     z-index: 0;
     margin-top: 30px;
@@ -23,7 +23,7 @@
 .protyle-wysiwyg [data-node-id].h3,
 .b3-typography h3 {
     font-size: 1.4em !important;
-    font-weight: 550;
+    /* font-weight: 550; */
     position: relative;
     z-index: 0;
     margin-top: 24px;
@@ -32,7 +32,7 @@
 .protyle-wysiwyg [data-node-id].h4,
 .b3-typography h4 {
     font-size: 1.3em !important;
-    font-weight: 550;
+    /* font-weight: 550; */
     position: relative;
     z-index: 0;
     margin-top: 18px;
@@ -41,7 +41,7 @@
 .protyle-wysiwyg [data-node-id].h5,
 .b3-typography h5 {
     font-size: 1.2em !important;
-    font-weight: 550;
+    /* font-weight: 550; */
     position: relative;
     z-index: 0;
     margin-top: 12px;
@@ -50,7 +50,7 @@
 .protyle-wysiwyg [data-node-id].h6,
 .b3-typography h6 {
     font-size: 1.1em !important;
-    font-weight: 550;
+    /* font-weight: 550; */
     position: relative;
     z-index: 0;
     margin-top: 6px;
